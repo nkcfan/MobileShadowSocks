@@ -56,7 +56,18 @@ Don't panic. Just reset your network settings in Preferences and everything will
 ### Development
 
 #### Prerequisites
-* Xcode 4 or above (using latest version is recommended)
+
+* CocoaPods
+
+Install the dependencies via [CocoaPods](http://cocoapods.org/):
+
+```bash
+$ pod install
+```
+
+* Devices with iOS 6 or above
+
+* Xcode 5 or above (using latest version is recommended)
 
 __Note__: You need to first quit Xcode completely and disable force code-sign of iOS SDK as follows (iOS 7.1 SDK as example, change to your current SDK version):
 
@@ -72,7 +83,7 @@ sudo /usr/bin/plutil -convert binary1 "$SDKFILE"
 ```bash
 git clone --recursive https://github.com/linusyang/MobileShadowSocks.git
 cd MobileShadowSocks
-xcodebuild -configuration Release
+xcodebuild -workspace MobileShadowSocks.xcworkspace -scheme MobileShadowSocks -configuration Release
 ```
 
 And the built Debian package will be generated under __release__ folder in the project directory.

@@ -19,6 +19,7 @@
 - (void)setBadge:(BOOL)enabled;
 - (void)setProxySwitcher:(BOOL)enabled;
 - (void)setAutoProxySwitcher:(BOOL)enabled;
+- (BOOL)mirrorAutoProxy:(void (^)(NSString *path))success;
 - (void)checkFileNotFound;
 
 @end

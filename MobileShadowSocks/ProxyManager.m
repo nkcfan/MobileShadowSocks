@@ -228,6 +228,11 @@ typedef enum {
     return [[ProfileManager sharedProfileManager] readBool:GLOBAL_PROXY_ENABLE_KEY];
 }
 
+- (BOOL)_prefAutoProxyEnabled
+{
+    return [[ProfileManager sharedProfileManager] readBool:kProfileAutoProxy];
+}
+
 #pragma marks - Public methods
 
 - (void)setProxyEnabled:(BOOL)enabled
@@ -239,9 +244,14 @@ typedef enum {
 
 - (void)syncAutoProxy
 {
-    // Change proxy only if proxy is enabled
-    if ([self _prefProxyEnabled]) {
-        [self setProxyEnabled:YES];
+    // Change proxy only if proxy is enabled and auto proxy is enabled
+    if ([self _prefProxyEnabled] && [self _prefAutoProxyEnabled]) {
+        // Mirror Pac url to local file
+        [self.delegate mirrorAutoProxy:^(NSString *path) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    [self setProxyEnabled:YES];
+            });
+        }];
     }
 }
 

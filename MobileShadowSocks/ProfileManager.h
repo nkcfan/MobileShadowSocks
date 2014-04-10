@@ -21,6 +21,7 @@
 #define kProfilePass @"SOCKS_PASS"
 #define kProfileCrypto @"CRYPTO_METHOD"
 #define kProfilePac @"PAC_FILE"
+#define kProfileMirrorPac @"PACK_MIRROR"
 #define kProfileExcept @"EXCEPTION_LIST"
 #define kProfileAutoProxy @"AUTO_PROXY"
 

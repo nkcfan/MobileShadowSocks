@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2D512E16D8424AB5D09C57 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFAF536EA8340ACA787ECA7 /* libPods.a */; };
 		4B07BAC918937B44003600C0 /* libZXingObjC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07BABD18937ACF003600C0 /* libZXingObjC-iOS.a */; };
 		4B07BACB18937CC1003600C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07BACA18937CC1003600C0 /* AVFoundation.framework */; };
 		4B07BACF18937CD1003600C0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07BACE18937CD1003600C0 /* CoreMedia.framework */; };
@@ -190,6 +191,8 @@
 		4BF9031216BA9F6A00E35F60 /* SettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4BF9031616BA9F9200E35F60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4BFF38D018F6924500C04078 /* unblock.pac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unblock.pac; sourceTree = "<group>"; };
+		8C7F53A01AAE40C18FC249C0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9EFAF536EA8340ACA787ECA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,7 @@
 				4B3A810E16BA4A2C00BE1B4C /* UIKit.framework in Frameworks */,
 				4B3A811016BA4A2C00BE1B4C /* Foundation.framework in Frameworks */,
 				4B3A811216BA4A2C00BE1B4C /* CoreGraphics.framework in Frameworks */,
+				2E2D512E16D8424AB5D09C57 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +237,7 @@
 				4B3A811316BA4A2C00BE1B4C /* MobileShadowSocks */,
 				4B3A810C16BA4A2C00BE1B4C /* Frameworks */,
 				4B3A810A16BA4A2C00BE1B4C /* Products */,
+				8C7F53A01AAE40C18FC249C0 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +264,7 @@
 				4B3A810D16BA4A2C00BE1B4C /* UIKit.framework */,
 				4B3A810F16BA4A2C00BE1B4C /* Foundation.framework */,
 				4B3A811116BA4A2C00BE1B4C /* CoreGraphics.framework */,
+				9EFAF536EA8340ACA787ECA7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -348,10 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A812116BA4A2C00BE1B4C /* Build configuration list for PBXNativeTarget "MobileShadowSocks" */;
 			buildPhases = (
+				1B43607D290047598CB97567 /* Check Pods Manifest.lock */,
 				4B3A810516BA4A2C00BE1B4C /* Sources */,
 				4B3A810616BA4A2C00BE1B4C /* Frameworks */,
 				4B3A810716BA4A2C00BE1B4C /* Resources */,
 				4B3A812716BA7DFE00BE1B4C /* Run Script */,
+				549860C230CC4E618F14CD6D /* Copy Pods Resources */,
 			);
 			buildRules = (
 				4B1604441715A78D00C2D873 /* PBXBuildRule */,
@@ -472,6 +480,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B43607D290047598CB97567 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		4B3A812716BA7DFE00BE1B4C /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,6 +508,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "if [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/bin/bash ${PROJECT_DIR}/extra/build-extra.sh\nfi\n";
+		};
+		549860C230CC4E618F14CD6D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -548,10 +586,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					arm64,
-					armv7,
-				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -565,9 +599,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -575,26 +610,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					arm64,
-					armv7,
-				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
 		4B3A812216BA4A2C00BE1B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7F53A01AAE40C18FC249C0 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileShadowSocks/MobileShadowSocks-Prefix.pch";
@@ -612,6 +645,7 @@
 		};
 		4B3A812316BA4A2C00BE1B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7F53A01AAE40C18FC249C0 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileShadowSocks/MobileShadowSocks-Prefix.pch";

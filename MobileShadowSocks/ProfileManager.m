@@ -295,7 +295,7 @@ SINGLETON_FOR_CLASS(ProfileManager)
     NSString *timeOut = [NSString stringWithFormat:@"%d", LOCAL_TIMEOUT];
     NSString *cryptoMethod = [self fetchConfigForKey:kProfileCrypto andDefault:[CipherViewController defaultCipher]];
     NSMutableString *exceptString = nil;
-    NSString *pacFilePath = [self fetchConfigForKey:kProfilePac andDefault:nil];
+    NSString *pacFilePath = [self fetchConfigForKey:kProfileMirrorPac andDefault:nil];
     NSInteger i;
     
     NSString *excepts = [self fetchConfigForKey:kProfileExcept andDefault:nil];

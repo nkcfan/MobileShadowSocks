@@ -16,6 +16,7 @@
 #import "ProfileManager.h"
 #import "UIAlertView+TextField.h"
 #import "UIAlertView+Blocks.h"
+#import "AFNetworking.h"
 
 #define APP_VER @"0.3.1"
 #define APP_BUILD @"3"
@@ -25,6 +26,7 @@
 #define kURLPubAccounts @"https://www.shadowsocks.net/"
 #define PAC_AUTO_NAME @"auto.pac"
 #define PAC_UNBLOCK_NAME @"unblock.pac"
+#define PAC_MIRROR_NAME @"com.linusyang.MobileShadowSocks/mirror.pac"
 
 #define CELL_INDEX_TITLE 0
 #define CELL_INDEX_KEY 1
@@ -429,9 +431,49 @@ typedef enum {
     [alert release];
 }
 
-- (void)checkFileNotFound
+// If pacFile is url but not file url, async download locally as a mirror and return true
+// Otherwise return false
+- (BOOL)mirrorAutoProxy:(void (^)(NSString *path))success
 {
     NSString *pacFile = [[[ProfileManager sharedProfileManager] readObject:kProfilePac] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    NSURL *url = [NSURL URLWithString:pacFile];
+    if (pacFile.length == 0 || [url scheme].length == 0) {
+        [[ProfileManager sharedProfileManager] saveObject:pacFile forKey:kProfileMirrorPac];
+        success(pacFile);
+        return false;
+    }
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *mirrorFile = PAC_MIRROR_NAME;
+    NSString *path = [cachesPath stringByAppendingPathComponent:mirrorFile];
+    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+    
+    [operation setCompletionBlockWithSuccess:
+     ^(AFHTTPRequestOperation *operation, id responseObject) {
+         NSLog(@"Successfully downloaded file to %@", path);
+         [[ProfileManager sharedProfileManager] saveObject:path forKey:kProfileMirrorPac];
+         success(path);
+     }
+                                     failure:
+     ^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"Error: %@", error);
+         [[ProfileManager sharedProfileManager] saveObject:@"" forKey:kProfileMirrorPac];
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"Failed to download PAC from URL. Redirect all traffic to proxy.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil, nil];
+         [alert show];
+         [alert release];
+     }];
+    [operation start];
+    return true;
+}
+
+- (void)checkFileNotFound
+{
+    NSString *pacFile = [[[ProfileManager sharedProfileManager] readObject:kProfileMirrorPac] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
     if ([pacFile length] == 0 || ![[NSFileManager defaultManager] fileExistsAtPath:pacFile]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"PAC file not found. Redirect all traffic to proxy.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil, nil];
         [alert show];
