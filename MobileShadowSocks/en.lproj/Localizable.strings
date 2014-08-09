@@ -1,5 +1,4 @@
 {
-    "\"Table\" is the default cipher. Other ciphers need ShadowSocks 1.2 or above on the server." = "\"Table\" is the default cipher. Other ciphers need ShadowSocks 1.2 or above on the server.";
     "AES 128-bit" = "AES 128-bit";
     "AES 192-bit" = "AES 192-bit";
     "AES 256-bit (Recommended)" = "AES 256-bit (Recommended)";
@@ -14,7 +13,7 @@
     Cancel = Cancel;
     "Cannot parse URL link" = "Cannot parse URL link";
     "China Whitelist" = "China Whitelist";
-    "China Whitelist will bypass websites in China. Unblock Youku will let you visit video sites in China like Youku via ShadowSocks proxy." = "China Whitelist will bypass websites in China. Unblock Youku will let you visit video sites in China like Youku via ShadowSocks proxy.";
+    "China Whitelist might be only useful for users in China." = "China Whitelist might be only useful for users in China.";
     "Choose PAC File" = "Choose PAC File";
     Cipher = Cipher;
     "Copy Link" = "Copy Link";
@@ -32,6 +31,7 @@
     "From Camera" = "From Camera";
     "From Photo Library" = "From Photo Library";
     General = General;
+    "Go to Settings" = "Go to Settings";
     "Help Page" = "Help Page";
     "I've shared a #ShadowSocks profile with QR Code." = "I've shared a #ShadowSocks profile with QR Code.";
     "I've shared a #ShadowSocks# profile with QR Code." = "I've shared a #ShadowSocks# profile with QR Code.";
@@ -49,6 +49,8 @@
     "PAC File" = "PAC File";
     "PAC file not found. Redirect all traffic to proxy." = "PAC file not found. Redirect all traffic to proxy.";
     Password = Password;
+    "Per-App Proxy" = "Per-App Proxy";
+    "Per-App Proxy needs to install \U201cShadowSocks Per-App Plugin\U201d from Cydia." = "Per-App Proxy needs to install \U201cShadowSocks Per-App Plugin\U201d from Cydia.";
     "Photo library is not available." = "Photo library is not available.";
     "Please specify file path" = "Please specify file path";
     Port = Port;
@@ -62,6 +64,7 @@
     "QR Code Error" = "QR Code Error";
     RC2 = RC2;
     RC4 = RC4;
+    "Redirect All Traffic" = "Redirect All Traffic";
     Repair = Repair;
     "Repair Service" = "Repair Service";
     Retry = Retry;
@@ -81,13 +84,16 @@
     "Single tap for manual focus.\nDouble tap for auto-focus.\nTap torch button to toggle flashlight." = "Single tap for manual focus.\nDouble tap for auto-focus.\nTap torch button to toggle flashlight.";
     "Split with comma" = "Split with comma";
     "Table (Default)" = "Table (Default)";
+    "Table (default cipher) and RC4 are NOT SECURE. Please use stronger encryption like AES or Blowfish." = "Table (default cipher) and RC4 are NOT SECURE. Please use stronger encryption like AES or Blowfish.";
+    "The file is not ended with \U201c.pac\U201d or a valid PAC file." = "The file is not ended with \U201c.pac\U201d or a valid PAC file.";
     Torch = Torch;
     Twitter = Twitter;
     "Twitter account is not available." = "Twitter account is not available.";
-    "Unblock Youku" = "Unblock Youku";
     "Use Default PAC File" = "Use Default PAC File";
     Version = Version;
+    "Visit Cydia" = "Visit Cydia";
     Warning = Warning;
     "Warning: Reparing service will drop all proxy connections. This is only needed when you cannot enable the proxy. Are you sure to continue?" = "Warning: Reparing service will drop all proxy connections. This is only needed when you cannot enable the proxy. Are you sure to continue?";
     "is not supported" = "is not supported";
+    "\U201cShadowSocks Per-App Plugin\U201d is installed. Please use Settings to setup Per-App Proxy." = "\U201cShadowSocks Per-App Plugin\U201d is installed. Please use Settings to setup Per-App Proxy.";
 }

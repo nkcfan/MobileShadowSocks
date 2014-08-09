@@ -249,6 +249,7 @@ function FindProxyForURL(url, host) {
             'pcpop.com',
             'linkedin.com',
             'weiphone.com',
+            'feng.com',
             'doc88.com',
             'adobe.com',
             'shangdu.com',

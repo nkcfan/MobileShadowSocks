@@ -28,6 +28,7 @@
 		4B4A095518D08E0F008A5BF0 /* ProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A095418D08E0F008A5BF0 /* ProxyManager.m */; };
 		4B4A095818D09B6B008A5BF0 /* UIAlertView+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A095718D09B6B008A5BF0 /* UIAlertView+TextField.m */; };
 		4B4A095C18D1D1DF008A5BF0 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A095B18D1D1DF008A5BF0 /* UIAlertView+Blocks.m */; };
+		4B53147F1961C86200A0E207 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B53147E1961C86200A0E207 /* MobileCoreServices.framework */; };
 		4B5E2BBB1894D572000455C5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E2BBA1894D572000455C5 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4B6097791869FDC300A5FB30 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B60977B1869FDC300A5FB30 /* InfoPlist.strings */; };
 		4B6CD067189191AF00360A26 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CD053189191AF00360A26 /* AppIcon29x29.png */; };
@@ -50,6 +51,7 @@
 		4B6CD078189191AF00360A26 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CD064189191AF00360A26 /* Icon-Small@2x.png */; };
 		4B6CD079189191AF00360A26 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CD065189191AF00360A26 /* Icon.png */; };
 		4B84A9F8189571D900188A2B /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B84A9F7189571D900188A2B /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4BC53AE9196188D0006BF16B /* PerAppStubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC53AE8196188D0006BF16B /* PerAppStubViewController.m */; };
 		4BE04A371751E9AF0019AAB1 /* CipherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE04A361751E9AF0019AAB1 /* CipherViewController.m */; };
 		4BF38F11186DD07F008C4EF1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF38F10186DD07F008C4EF1 /* ProfileViewController.m */; };
 		4BF45D731899FD670026F956 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF45D721899FD670026F956 /* ImagePickerViewController.m */; };
@@ -58,7 +60,7 @@
 		4BF9030816BA9D5D00E35F60 /* com.linusyang.shadowsocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9030116BA9D5D00E35F60 /* com.linusyang.shadowsocks.plist */; };
 		4BF9031116BA9F6A00E35F60 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9031216BA9F6A00E35F60 /* SettingTableViewController.m */; };
 		4BF9031516BA9F8D00E35F60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9031316BA9F8D00E35F60 /* Localizable.strings */; };
-		4BFF38D118F6924500C04078 /* unblock.pac in Resources */ = {isa = PBXBuildFile; fileRef = 4BFF38D018F6924500C04078 /* unblock.pac */; };
+		4BFE883A1973CE6B004F539F /* UIView+UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE88391973CE6B004F539F /* UIView+UserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -154,6 +156,7 @@
 		4B4A095B18D1D1DF008A5BF0 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Blocks.m"; path = "UIAlertView-Blocks/UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		4B4B50BE1892BD2900118736 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4B4B50BF1892BD2900118736 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4B53147E1961C86200A0E207 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4B55FD1F176468800062BA97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4B5E2BBA1894D572000455C5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4B60977A1869FDC300A5FB30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 		4B6CD064189191AF00360A26 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		4B6CD065189191AF00360A26 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Icons/Icon.png; sourceTree = "<group>"; };
 		4B84A9F7189571D900188A2B /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		4BC53AE7196188D0006BF16B /* PerAppStubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerAppStubViewController.h; sourceTree = "<group>"; };
+		4BC53AE8196188D0006BF16B /* PerAppStubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerAppStubViewController.m; sourceTree = "<group>"; };
 		4BE04A351751E9AF0019AAB1 /* CipherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherViewController.h; sourceTree = "<group>"; };
 		4BE04A361751E9AF0019AAB1 /* CipherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherViewController.m; sourceTree = "<group>"; };
 		4BF38F0F186DD07F008C4EF1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -190,6 +195,8 @@
 		4BF9030116BA9D5D00E35F60 /* com.linusyang.shadowsocks.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.linusyang.shadowsocks.plist; sourceTree = "<group>"; };
 		4BF9031216BA9F6A00E35F60 /* SettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4BF9031616BA9F9200E35F60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4BFE88381973CE6B004F539F /* UIView+UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UserInfo.h"; sourceTree = "<group>"; };
+		4BFE88391973CE6B004F539F /* UIView+UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UserInfo.m"; sourceTree = "<group>"; };
 		4BFF38D018F6924500C04078 /* unblock.pac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unblock.pac; sourceTree = "<group>"; };
 		8C7F53A01AAE40C18FC249C0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9EFAF536EA8340ACA787ECA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B53147F1961C86200A0E207 /* MobileCoreServices.framework in Frameworks */,
 				4B84A9F8189571D900188A2B /* Twitter.framework in Frameworks */,
 				4B5E2BBB1894D572000455C5 /* Social.framework in Frameworks */,
 				4B07BAD518937CE2003600C0 /* ImageIO.framework in Frameworks */,
@@ -252,6 +260,7 @@
 		4B3A810C16BA4A2C00BE1B4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B53147E1961C86200A0E207 /* MobileCoreServices.framework */,
 				4B84A9F7189571D900188A2B /* Twitter.framework */,
 				4B5E2BBA1894D572000455C5 /* Social.framework */,
 				4B07BAD418937CE2003600C0 /* ImageIO.framework */,
@@ -280,6 +289,8 @@
 				4BE04A361751E9AF0019AAB1 /* CipherViewController.m */,
 				4BF38F0F186DD07F008C4EF1 /* ProfileViewController.h */,
 				4BF38F10186DD07F008C4EF1 /* ProfileViewController.m */,
+				4BC53AE7196188D0006BF16B /* PerAppStubViewController.h */,
+				4BC53AE8196188D0006BF16B /* PerAppStubViewController.m */,
 				4B07BAD618937D16003600C0 /* CodeScannerViewController.h */,
 				4B07BAD718937D16003600C0 /* CodeScannerViewController.m */,
 				4B07BAD918938059003600C0 /* CodeGeneratorViewController.h */,
@@ -292,6 +303,8 @@
 				4B07BADE189391B0003600C0 /* NSString+Base64.m */,
 				4BF521EE1893FEED0031D309 /* UINavigationController+Orientation.h */,
 				4BF521EF1893FEED0031D309 /* UINavigationController+Orientation.m */,
+				4BFE88381973CE6B004F539F /* UIView+UserInfo.h */,
+				4BFE88391973CE6B004F539F /* UIView+UserInfo.m */,
 				4B4A095618D09B6B008A5BF0 /* UIAlertView+TextField.h */,
 				4B4A095718D09B6B008A5BF0 /* UIAlertView+TextField.m */,
 				4B4A095A18D1D1DF008A5BF0 /* UIAlertView+Blocks.h */,
@@ -311,7 +324,6 @@
 				4B60977B1869FDC300A5FB30 /* InfoPlist.strings */,
 				4BF9031316BA9F8D00E35F60 /* Localizable.strings */,
 				4B080C8316FB2B6900DE1EE3 /* auto.pac */,
-				4BFF38D018F6924500C04078 /* unblock.pac */,
 				4BF9030116BA9D5D00E35F60 /* com.linusyang.shadowsocks.plist */,
 				4B1604421715A43A00C2D873 /* Default-568h@2x.png */,
 				4B3A811516BA4A2C00BE1B4C /* MobileShadowSocks-Info.plist */,
@@ -473,7 +485,6 @@
 				4B6CD06C189191AF00360A26 /* AppIcon50x50@2x.png in Resources */,
 				4B1604431715A43A00C2D873 /* Default-568h@2x.png in Resources */,
 				4B6CD067189191AF00360A26 /* AppIcon29x29.png in Resources */,
-				4BFF38D118F6924500C04078 /* unblock.pac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +552,8 @@
 				4B07BADF189391B0003600C0 /* NSString+Base64.m in Sources */,
 				4BE04A371751E9AF0019AAB1 /* CipherViewController.m in Sources */,
 				4BF38F11186DD07F008C4EF1 /* ProfileViewController.m in Sources */,
+				4BC53AE9196188D0006BF16B /* PerAppStubViewController.m in Sources */,
+				4BFE883A1973CE6B004F539F /* UIView+UserInfo.m in Sources */,
 				4BF45D731899FD670026F956 /* ImagePickerViewController.m in Sources */,
 				4B4A095C18D1D1DF008A5BF0 /* UIAlertView+Blocks.m in Sources */,
 				4B4A095518D08E0F008A5BF0 /* ProxyManager.m in Sources */,
