@@ -30,8 +30,6 @@
 #define PAC_DEFAULT_NAME @"auto.pac"
 #define PAC_SUFFIX @".pac"
 #define PAC_FUNC_NAME @"FindProxyForURL"
-#define PAC_AUTO_NAME @"auto.pac"
-#define PAC_UNBLOCK_NAME @"unblock.pac"
 #define PAC_MIRROR_NAME @"com.linusyang.MobileShadowSocks/mirror.pac"
 
 #define CELL_INDEX_TITLE 0
